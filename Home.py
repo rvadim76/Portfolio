@@ -1,6 +1,6 @@
 import streamlit as st
+import pandas as pd
 import os
-import pandas
 
 st.set_page_config(layout="wide")
 
@@ -27,7 +27,7 @@ st.write(content2)
 # col3, empty_col, col4 = st.columns(3)
 col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
 
-df = pandas.read_csv("C:/Users/vrusu/PycharmProjects/portfolio_app/venv/data.csv", sep=";")
+df = pd.read_csv("C:/Users/vrusu/PycharmProjects/portfolio_app/venv/data.csv", sep=";")
 
 with col3:
     for index, row in df[:10].iterrows():

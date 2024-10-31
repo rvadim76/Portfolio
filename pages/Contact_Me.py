@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from send_email import send_email
+from Send_Email import send_mail
 
 df = pd.read_csv("topics.csv")
 
@@ -21,5 +21,5 @@ Topic {option}
 
     button = st.form_submit_button("Submit your message")
     if button:
-        send_email(message)
+        send_mail(message)
         st.info("Email was sent successfully.")
